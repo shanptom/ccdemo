@@ -72,7 +72,7 @@
             <!-- Right Panel - Hero Image -->
             <div class="coffee-silhouette">
                 <div class="hero-cup-display">
-                    <img src="images/coffee_cup.png" alt="Artisanal Coffee Cups" loading="eager">
+                    <img src="src/images/coffee_cup.png" alt="Artisanal Coffee Cups" loading="eager">
                     <div class="cup-steam">
                         <div class="cup-steam-particle"></div>
                         <div class="cup-steam-particle"></div>
@@ -87,12 +87,17 @@
             <h2 class="landmark-heading">Seasonal Signature</h2>
 
             <div class="carousel-container">
-                <div class="carousel-track">
+                <button class="carousel-arrow carousel-arrow-left" aria-label="Previous items">
+                    ‹
+                </button>
+
+                <div class="carousel-wrapper">
+                    <div class="carousel-track">
                     <!-- Product Pod One -->
                     <div class="product-pod carousel-item">
                         <div class="pod-visual">
                             <div class="shape-carrier">
-                                <img src="images/white_chocolate_raspberry_macadamia_nut_latte.png"
+                                <img src="src/images/white_chocolate_raspberry_macadamia_nut_latte.png"
                                     alt="White Chocolate Raspberry Macadamia Nut Latte" loading="lazy">
                             </div>
                             <div class="pod-accent"></div>
@@ -108,7 +113,7 @@
                     <div class="product-pod carousel-item">
                         <div class="pod-visual">
                             <div class="shape-carrier">
-                                <img src="images/Eggnog_latte.png" alt="Eggnog Latte" loading="lazy">
+                                <img src="src/images/Eggnog_latte.png" alt="Eggnog Latte" loading="lazy">
                             </div>
                             <div class="pod-accent"></div>
                         </div>
@@ -123,17 +128,22 @@
                     <div class="product-pod carousel-item">
                         <div class="pod-visual">
                             <div class="shape-carrier">
-                                <img src="images/maple_brown_sugar_latte.png" alt="Maple Brown Sugar Latte" loading="lazy">
+                                <img src="src/images/white_chocolate_peppermint_latte.png" alt="White Chocolate Peppermint Latte" loading="lazy">
                             </div>
                             <div class="pod-accent"></div>
                         </div>
                         <div class="pod-narrative">
-                            <h3>Earth's Sweetness</h3>
-                            <p>Maple Brown Sugar Latte</p>
-                            <span class="narrative-accent">Nature's purest embrace</span>
+                            <h3>Winter's Kiss</h3>
+                            <p>White Chocolate Peppermint Latte</p>
+                            <span class="narrative-accent">Cool peppermint meets creamy indulgence</span>
                         </div>
                     </div>
+                    </div>
                 </div>
+
+                <button class="carousel-arrow carousel-arrow-right" aria-label="Next items">
+                    ›
+                </button>
             </div>
 
             <div class="discovery-portal">
@@ -158,7 +168,7 @@
 
                 <div class="visual-canvas">
                     <div class="canvas-frame">
-                        <img src="images/careers.png" alt="Barista at work" loading="lazy">
+                        <img src="src/images/careers.png" alt="Barista at work" loading="lazy">
                         <div class="frame-depth"></div>
                     </div>
                 </div>
@@ -202,33 +212,74 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const carouselTrack = document.querySelector('.carousel-track');
+            const leftArrow = document.querySelector('.carousel-arrow-left');
+            const rightArrow = document.querySelector('.carousel-arrow-right');
 
-            if (carouselTrack) {
-                // Clone carousel items for infinite effect
-                const carouselItems = carouselTrack.children;
-                const itemWidth = 300 + 16; // 300px width + 16px gap (var(--space-md))
+            if (carouselTrack && leftArrow && rightArrow) {
+                const carouselItems = Array.from(carouselTrack.querySelectorAll('.carousel-item'));
+                const itemCount = carouselItems.length;
+                const itemWidth = 316; // 300px width + 16px gap
 
-                // Add clones to the beginning and end for smooth infinite animation
-                let clonedItems = '';
+                // Clone items for infinite effect - clone all items and append/prepend
+                const clonedItemsAfter = carouselItems.map(item => item.cloneNode(true));
+                const clonedItemsBefore = carouselItems.map(item => item.cloneNode(true));
 
-                // Add a few clones at the beginning and end for smooth animation
-                Array.from(carouselItems).forEach(item => {
-                    clonedItems += item.outerHTML;
-                });
+                // Append clones after original items
+                clonedItemsAfter.forEach(clone => carouselTrack.appendChild(clone));
 
-                // Duplicate the items for seamless infinite scroll
-                carouselTrack.innerHTML += clonedItems;
-                carouselTrack.innerHTML = clonedItems + carouselTrack.innerHTML;
+                // Prepend clones before original items
+                clonedItemsBefore.reverse().forEach(clone => carouselTrack.insertBefore(clone, carouselTrack.firstChild));
 
-                // Adjust the animation to account for duplicated items
-                const animationDuration = 45; // Slightly longer for smoothness
-                carouselTrack.style.animationDuration = `${animationDuration}s`;
+                // Start at the first real item (after the prepended clones)
+                let currentIndex = itemCount;
+                let isAnimating = false;
 
-                // Adjust the transform to account for prepended items
-                const totalSlides = carouselItems.length;
-                const translatedDistance = totalSlides * itemWidth;
+                // Set initial position without transition
+                carouselTrack.style.transition = 'none';
+                carouselTrack.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
 
-                carouselTrack.style.transform = `translateX(-${translatedDistance}px)`;
+                // Re-enable transition after a brief moment
+                setTimeout(() => {
+                    carouselTrack.style.transition = 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+                }, 50);
+
+                // Function to move carousel
+                function moveCarousel(direction) {
+                    if (isAnimating) return;
+                    isAnimating = true;
+
+                    if (direction === 'left') {
+                        currentIndex--;
+                    } else {
+                        currentIndex++;
+                    }
+
+                    // Apply transform with transition
+                    carouselTrack.style.transition = 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+                    carouselTrack.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+
+                    // After transition, check if we need to reset position
+                    setTimeout(() => {
+                        // If we're at the end (showing cloned items), reset to the beginning
+                        if (currentIndex >= itemCount * 2) {
+                            carouselTrack.style.transition = 'none';
+                            currentIndex = itemCount;
+                            carouselTrack.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+                        }
+                        // If we're at the beginning (showing cloned items), reset to the end
+                        else if (currentIndex < itemCount) {
+                            carouselTrack.style.transition = 'none';
+                            currentIndex = itemCount * 2 - 1;
+                            carouselTrack.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+                        }
+
+                        isAnimating = false;
+                    }, 400); // Match transition duration
+                }
+
+                // Arrow event listeners
+                leftArrow.addEventListener('click', () => moveCarousel('left'));
+                rightArrow.addEventListener('click', () => moveCarousel('right'));
             }
         });
     </script>

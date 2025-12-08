@@ -115,12 +115,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Dialogue Bridge -->
-        <section class="dialogue-bridge">
-            <div class="bridge-composition">
                 <div class="conversation-portal">
                     <h2 class="portal-title">Initiate Conversation</h2>
                     <div class="communication-weave">
@@ -130,44 +125,44 @@
                         <p class="communication-strand">Your thoughts become threads in our collective narrative,
                             helping us create even more meaningful experiences for our community.</p>
                     </div>
-                </div>
 
-                <div class="interaction-form">
-                    <form id="contactForm" class="interaction-matrix">
-                        <div class="input-cluster">
-                            <div class="matrix-cell">
-                                <label for="name" class="cell-label">Identifer</label>
-                                <input type="text" id="name" name="name" required minlength="2" maxlength="50"
-                                    class="cell-input">
+                    <div class="interaction-form" style="margin-top: var(--space-lg);">
+                        <form id="contactForm" class="interaction-matrix">
+                            <div class="input-cluster">
+                                <div class="matrix-cell">
+                                    <label for="name" class="cell-label">Identifer</label>
+                                    <input type="text" id="name" name="name" required minlength="2" maxlength="50"
+                                        class="cell-input">
+                                </div>
+                                <div class="matrix-cell">
+                                    <label for="email" class="cell-label">Digital Address</label>
+                                    <input type="email" id="email" name="email" required class="cell-input">
+                                </div>
                             </div>
-                            <div class="matrix-cell">
-                                <label for="email" class="cell-label">Digital Address</label>
-                                <input type="email" id="email" name="email" required class="cell-input">
+
+                            <div class="input-cluster">
+                                <div class="matrix-cell">
+                                    <label for="phone" class="cell-label">Voice Connection</label>
+                                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                        class="cell-input">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="input-cluster">
-                            <div class="matrix-cell">
-                                <label for="phone" class="cell-label">Voice Connection</label>
-                                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                    class="cell-input">
+                            <div class="narrative-cell">
+                                <label for="message" class="cell-label">Your Narrative</label>
+                                <textarea id="message" name="message" rows="6" required minlength="10" maxlength="1000"
+                                    class="narrative-input"
+                                    placeholder="Share your thoughts, questions, stories..."></textarea>
                             </div>
-                        </div>
 
-                        <div class="narrative-cell">
-                            <label for="message" class="cell-label">Your Narrative</label>
-                            <textarea id="message" name="message" rows="6" required minlength="10" maxlength="1000"
-                                class="narrative-input"
-                                placeholder="Share your thoughts, questions, stories..."></textarea>
-                        </div>
-
-                        <div class="transmission-portal">
-                            <button type="submit" class="transmission-button">
-                                <span class="button-text">Send Transmission</span>
-                                <div class="transmission-pulse"></div>
-                            </button>
-                        </div>
-                    </form>
+                            <div class="transmission-portal">
+                                <button type="submit" class="transmission-button">
+                                    <span class="button-text">Send Transmission</span>
+                                    <div class="transmission-pulse"></div>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>

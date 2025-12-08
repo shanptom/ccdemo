@@ -413,28 +413,7 @@ img {
     overflow: hidden;
 }
 
-/* Decorative background elements */
-.product-landscape::before {
-    content: '';
-    position: absolute;
-    top: 20%;
-    right: -10%;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(201, 166, 107, 0.08) 0%, transparent 70%);
-    border-radius: 50%;
-}
-
-.product-landscape::after {
-    content: '';
-    position: absolute;
-    bottom: 10%;
-    left: -5%;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(139, 90, 43, 0.06) 0%, transparent 70%);
-    border-radius: 50%;
-}
+/* Decorative background elements removed to match page background */
 
 .landmark-heading {
     text-align: center;
@@ -461,15 +440,81 @@ img {
 
 /* Infinite Carousel */
 .carousel-container {
-    overflow: hidden;
+    overflow: visible;
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
+    background: var(--foam-white);
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+}
+
+.carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.carousel-arrow {
+    background: linear-gradient(135deg, var(--gold-accent), var(--caramel-warm));
+    color: var(--espresso-dark);
+    border: none;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: all var(--duration-medium) var(--ease-bounce);
+    box-shadow: 0 6px 20px rgba(139, 90, 43, 0.4);
+    border: 2px solid var(--foam-white);
+}
+
+.carousel-arrow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+        rgba(250, 246, 241, 0.3) 0%,
+        transparent 50%,
+        rgba(26, 15, 10, 0.1) 100%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.carousel-arrow:hover {
+    background: linear-gradient(135deg, var(--caramel-warm), var(--gold-accent));
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 8px 30px rgba(139, 90, 43, 0.6);
+}
+
+.carousel-arrow:active {
+    transform: translateY(-50%) scale(1.05);
+}
+
+.carousel-arrow-left {
+    left: 10px;
+}
+
+.carousel-arrow-right {
+    right: 10px;
 }
 
 .carousel-track {
     display: flex;
-    animation: scrollInfinite 45s linear infinite;
+    transition: transform var(--duration-medium) var(--ease-smooth);
 }
 
 .carousel-item {
@@ -479,19 +524,6 @@ img {
     z-index: 1 !important; /* Reset z-index */
 }
 
-@keyframes scrollInfinite {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-33.333%); /* Move through one set of duplicated items */
-    }
-}
-
-/* Pause animation on hover */
-.carousel-container:hover .carousel-track {
-    animation-play-state: paused;
-}
 
 .product-pod {
     background: var(--foam-white);
@@ -1112,6 +1144,25 @@ img {
     .connection-details {
         align-items: center;
     }
+
+    .carousel-container {
+        padding: 0 60px;
+    }
+
+    .carousel-arrow {
+        width: 48px;
+        height: 48px;
+        font-size: 1.7rem;
+        box-shadow: 0 4px 15px rgba(139, 90, 43, 0.4);
+    }
+
+    .carousel-arrow-left {
+        left: 5px;
+    }
+
+    .carousel-arrow-right {
+        right: 5px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -1133,6 +1184,25 @@ img {
 
     .narrative-canvas h2 {
         font-size: clamp(2rem, 8vw, 2.5rem);
+    }
+
+    .carousel-container {
+        padding: 0 50px;
+    }
+
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+        box-shadow: 0 3px 12px rgba(139, 90, 43, 0.3);
+    }
+
+    .carousel-arrow-left {
+        left: 2px;
+    }
+
+    .carousel-arrow-right {
+        right: 2px;
     }
 }
 
@@ -2005,7 +2075,8 @@ button:focus-visible {
 }
 
 .coordinate-scroll,
-.temporal-weave {
+.temporal-weave,
+.mandala-framework .conversation-portal {
     background: var(--steam-mist);
     border-radius: 24px;
     padding: var(--space-xl);
