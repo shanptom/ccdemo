@@ -341,28 +341,9 @@ img {
             rgba(212, 184, 150, 0.4) 0%,
             rgba(201, 166, 107, 0.2) 100%);
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    animation: morphBlob 15s ease-in-out infinite;
 }
 
-@keyframes morphBlob {
 
-    0%,
-    100% {
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    }
-
-    25% {
-        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-    }
-
-    50% {
-        border-radius: 50% 60% 30% 60% / 40% 30% 70% 50%;
-    }
-
-    75% {
-        border-radius: 40% 30% 60% 50% / 60% 70% 30% 40%;
-    }
-}
 
 .hero-cup-display {
     position: relative;
@@ -376,20 +357,9 @@ img {
     height: auto;
     object-fit: contain;
     filter: drop-shadow(0 30px 60px rgba(26, 15, 10, 0.3));
-    animation: floatGently 6s ease-in-out infinite;
 }
 
-@keyframes floatGently {
 
-    0%,
-    100% {
-        transform: translateY(0) rotate(0deg);
-    }
-
-    50% {
-        transform: translateY(-15px) rotate(1deg);
-    }
-}
 
 /* Steam Animation */
 .cup-steam {
@@ -408,34 +378,17 @@ img {
             rgba(250, 246, 241, 0.6) 0%,
             transparent 100%);
     border-radius: 50%;
-    animation: steamRise 3s ease-out infinite;
 }
 
 .cup-steam-particle:nth-child(2) {
-    animation-delay: 0.5s;
     height: 50px;
 }
 
 .cup-steam-particle:nth-child(3) {
-    animation-delay: 1s;
     height: 35px;
 }
 
-@keyframes steamRise {
-    0% {
-        opacity: 0;
-        transform: translateY(0) scaleX(1);
-    }
 
-    20% {
-        opacity: 0.6;
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(-100px) scaleX(2);
-    }
-}
 
 @keyframes fadeSlideUp {
     from {
