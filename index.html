@@ -86,50 +86,52 @@
         <section class="product-landscape">
             <h2 class="landmark-heading">Seasonal Signature</h2>
 
-            <div class="scattered-display">
-                <!-- Product Pod One -->
-                <div class="product-pod pod-primary">
-                    <div class="pod-visual">
-                        <div class="shape-carrier">
-                            <img src="images/white_chocolate_raspberry_macadamia_nut_latte.png"
-                                alt="White Chocolate Raspberry Macadamia Nut Latte" loading="lazy">
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <!-- Product Pod One -->
+                    <div class="product-pod carousel-item">
+                        <div class="pod-visual">
+                            <div class="shape-carrier">
+                                <img src="images/white_chocolate_raspberry_macadamia_nut_latte.png"
+                                    alt="White Chocolate Raspberry Macadamia Nut Latte" loading="lazy">
+                            </div>
+                            <div class="pod-accent"></div>
                         </div>
-                        <div class="pod-accent"></div>
+                        <div class="pod-narrative">
+                            <h3>Velvet Harmony</h3>
+                            <p>White Chocolate Raspberry Macadamia Nut Latte</p>
+                            <span class="narrative-accent">Sweet indulgence reimagined</span>
+                        </div>
                     </div>
-                    <div class="pod-narrative">
-                        <h3>Velvet Harmony</h3>
-                        <p>White Chocolate Raspberry Macadamia Nut Latte</p>
-                        <span class="narrative-accent">Sweet indulgence reimagined</span>
-                    </div>
-                </div>
 
-                <!-- Product Pod Two -->
-                <div class="product-pod pod-secondary">
-                    <div class="pod-narrative">
-                        <h3>Festive Momentum</h3>
-                        <p>Eggnog Latte</p>
-                        <span class="narrative-accent">Holiday warmth in every sip</span>
-                    </div>
-                    <div class="pod-visual">
-                        <div class="shape-carrier">
-                            <img src="images/Eggnog_latte.png" alt="Eggnog Latte" loading="lazy">
+                    <!-- Product Pod Two -->
+                    <div class="product-pod carousel-item">
+                        <div class="pod-visual">
+                            <div class="shape-carrier">
+                                <img src="images/Eggnog_latte.png" alt="Eggnog Latte" loading="lazy">
+                            </div>
+                            <div class="pod-accent"></div>
                         </div>
-                        <div class="pod-accent"></div>
+                        <div class="pod-narrative">
+                            <h3>Festive Momentum</h3>
+                            <p>Eggnog Latte</p>
+                            <span class="narrative-accent">Holiday warmth in every sip</span>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Product Pod Three -->
-                <div class="product-pod pod-tertiary">
-                    <div class="pod-visual">
-                        <div class="shape-carrier">
-                            <img src="images/maple_brown_sugar_latte.png" alt="Maple Brown Sugar Latte" loading="lazy">
+                    <!-- Product Pod Three -->
+                    <div class="product-pod carousel-item">
+                        <div class="pod-visual">
+                            <div class="shape-carrier">
+                                <img src="images/maple_brown_sugar_latte.png" alt="Maple Brown Sugar Latte" loading="lazy">
+                            </div>
+                            <div class="pod-accent"></div>
                         </div>
-                        <div class="pod-accent"></div>
-                    </div>
-                    <div class="pod-narrative">
-                        <h3>Earth's Sweetness</h3>
-                        <p>Maple Brown Sugar Latte</p>
-                        <span class="narrative-accent">Nature's purest embrace</span>
+                        <div class="pod-narrative">
+                            <h3>Earth's Sweetness</h3>
+                            <p>Maple Brown Sugar Latte</p>
+                            <span class="narrative-accent">Nature's purest embrace</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -197,6 +199,39 @@
     </footer>
 
     <script src="src/js/main.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carouselTrack = document.querySelector('.carousel-track');
+
+            if (carouselTrack) {
+                // Clone carousel items for infinite effect
+                const carouselItems = carouselTrack.children;
+                const itemWidth = 300 + 16; // 300px width + 16px gap (var(--space-md))
+
+                // Add clones to the beginning and end for smooth infinite animation
+                let clonedItems = '';
+
+                // Add a few clones at the beginning and end for smooth animation
+                Array.from(carouselItems).forEach(item => {
+                    clonedItems += item.outerHTML;
+                });
+
+                // Duplicate the items for seamless infinite scroll
+                carouselTrack.innerHTML += clonedItems;
+                carouselTrack.innerHTML = clonedItems + carouselTrack.innerHTML;
+
+                // Adjust the animation to account for duplicated items
+                const animationDuration = 45; // Slightly longer for smoothness
+                carouselTrack.style.animationDuration = `${animationDuration}s`;
+
+                // Adjust the transform to account for prepended items
+                const totalSlides = carouselItems.length;
+                const translatedDistance = totalSlides * itemWidth;
+
+                carouselTrack.style.transform = `translateX(-${translatedDistance}px)`;
+            }
+        });
+    </script>
 </body>
 
 </html>

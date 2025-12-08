@@ -459,40 +459,38 @@ img {
     letter-spacing: -0.01em;
 }
 
-/* Staggered Collage Grid */
-.scattered-display {
-    max-width: 1300px;
+/* Infinite Carousel */
+.carousel-container {
+    overflow: hidden;
+    max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(4, auto);
-    gap: var(--space-md);
-    padding: var(--space-md);
     position: relative;
 }
 
-/* Primary Card - Large, rotated left */
-.product-pod.pod-primary {
-    grid-column: 1 / 6;
-    grid-row: 1 / 4;
-    transform: rotate(-3deg);
-    z-index: 3;
+.carousel-track {
+    display: flex;
+    animation: scrollInfinite 45s linear infinite;
 }
 
-/* Secondary Card - Medium, overlapping, rotated right */
-.product-pod.pod-secondary {
-    grid-column: 5 / 9;
-    grid-row: 2 / 5;
-    transform: rotate(2deg) translateY(40px);
-    z-index: 2;
+.carousel-item {
+    flex: 0 0 300px;
+    margin-right: var(--space-md);
+    transform: none !important; /* Reset previous transformations */
+    z-index: 1 !important; /* Reset z-index */
 }
 
-/* Tertiary Card - Smaller, offset */
-.product-pod.pod-tertiary {
-    grid-column: 9 / 13;
-    grid-row: 1 / 3;
-    transform: rotate(-1deg) translateY(60px);
-    z-index: 1;
+@keyframes scrollInfinite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-33.333%); /* Move through one set of duplicated items */
+    }
+}
+
+/* Pause animation on hover */
+.carousel-container:hover .carousel-track {
+    animation-play-state: paused;
 }
 
 .product-pod {
