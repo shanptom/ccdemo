@@ -1,97 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Casual Coffee Shop Menu - Coffee, Pastries, and Lunch">
     <title>Menu - Casual Coffee Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Space+Grotesk:wght@300;500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/responsive.css">
 </head>
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <a href="../index.html">
-                    <img src="../images/logo.png" alt="Casual Coffee Shop Logo" width="150" height="60">
-                </a>
-            </div>
-            <button class="hamburger-menu" aria-label="Menu">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-            <nav class="main-nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <main class="main-content">
-        <section class="page-header">
-            <div class="container">
-                <h1>Our Menu</h1>
-                <p class="tagline">Freshly prepared coffee, pastries, and lunch items</p>
+<body>
+    <!-- Directional Navigation -->
+    <nav class="directional-nav">
+        <div class="nav-core">
+            <div class="logo-flow text-logo">
+                <span class="logo-text">C<span class="logo-accent">a</span>sual</span>
+                <span class="logo-slogan">Coffee Co</span>
+            </div>
+            <div class="nav-paths">
+                <a href="../index.html" class="path-link">Home</a>
+                <a href="menu.html" class="path-link active-path">Menu</a>
+                <a href="about.html" class="path-link">About</a>
+                <a href="contact.html" class="path-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Fluid Menu Experience -->
+    <main class="experience-flow">
+        <!-- Gastronomic Gateway -->
+        <section class="menu Threshold">
+            <div class="threshold-atmosphere">
+                <div class="culinary-statement">
+                    <h1 class="architectural-horizon">
+                        <span class="horizon-layer">Culinary</span>
+                        <span class="horizon-layer">Discoveries</span>
+                    </h1>
+                    <div class="essence-codex">
+                        <span>Savor Freshness · Honor Craftsmanship · Celebrate Local</span>
+                    </div>
+                </div>
+
+                <div class="preparation-symphony">
+                    <div class="steaming-accents">
+                        <div class="aroma-particle"></div>
+                        <div class="aroma-particle"></div>
+                        <div class="aroma-particle"></div>
+                    </div>
+                </div>
+
+                <div class="exploration-catalyst">
+                    <a href="#seasonal-offerings" class="flow-connection primary-momentum">Begin Journey</a>
+                </div>
             </div>
         </section>
 
-        <section class="menu-section">
-            <div class="container">
-                <div class="menu-category" id="coffee">
-                    <h2>Coffee</h2>
-                    <div class="menu-grid" id="coffee-items">
-                        <!-- Coffee items will be loaded dynamically -->
+        <!-- Seasonal Culinary Landscape -->
+        <section class="seasonal-terrain" id="seasonal-offerings">
+            <div class="terrain-framework">
+                <h2 class="terrain-monument">Seasonal Offerings</h2>
+
+                <div class="culinary-parcel">
+                    <div class="parcel-header">
+                        <h3>Winter Coffee Symphony</h3>
+                        <p class="parcel-narrative">Rich, indulgent beverages crafted with seasonal ingredients and
+                            masterful technique</p>
+                    </div>
+                    <div class="parcel-collection" id="coffee-parcel">
+                        <!-- Coffee offerings loaded dynamically -->
                     </div>
                 </div>
 
-                <div class="menu-category" id="pastries">
-                    <h2>Pastries</h2>
-                    <div class="menu-grid" id="pastries-items">
-                        <!-- Pastries items will be loaded dynamically -->
+                <div class="culinary-parcel">
+                    <div class="parcel-header">
+                        <h3>Artisan Pastries</h3>
+                        <p class="parcel-narrative">Fresh-baked confections using time-honored techniques and premium
+                            ingredients</p>
+                    </div>
+                    <div class="parcel-collection" id="pastries-parcel">
+                        <!-- Pastry offerings loaded dynamically -->
                     </div>
                 </div>
 
-                <div class="menu-category" id="lunch">
-                    <h2>Lunch</h2>
-                    <div class="menu-grid" id="lunch-items">
-                        <!-- Lunch items will be loaded dynamically -->
+                <div class="culinary-parcel">
+                    <div class="parcel-header">
+                        <h3>Sustainable Lunch Provisions</h3>
+                        <p class="parcel-narrative">Nutritious midday meals prepared with locally-sourced, fresh
+                            ingredients</p>
+                    </div>
+                    <div class="parcel-collection" id="lunch-parcel">
+                        <!-- Lunch offerings loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preparation Philosophy -->
+        <section class="preparation-manifesto">
+            <div class="manifesto-canvas">
+                <div class="philosophy-display">
+                    <h2>Behind Every Preparation</h2>
+                    <div class="craft-narrative">
+                        <p class="craft-thread">Our culinary approach is rooted in authenticity and attention to detail.
+                            Each preparation reflects our commitment to quality, sustainability, and the joy of
+                            exceptional flavors.</p>
+                        <p class="craft-thread">We believe that great food and beverages are more than nutrition—they're
+                            expressions of craftsmanship, culture, and community.</p>
+                    </div>
+                    <div class="preparation-values">
+                        <div class="value-facet">
+                            <span class="facet-accent">🌱</span>
+                            <h4>Local & Sustainable</h4>
+                            <p>Sourced from nearby farms and providers</p>
+                        </div>
+                        <div class="value-facet">
+                            <span class="facet-accent">🎨</span>
+                            <h4>Crafted with Care</h4>
+                            <p>Each item prepared with precision and pride</p>
+                        </div>
+                        <div class="value-facet">
+                            <span class="facet-accent">🌍</span>
+                            <h4>Ethically Sourced</h4>
+                            <p>Supporting fair trade and sustainable practices</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="culinary-visual">
+                    <div class="preparation-montage">
+                        <img src="../images/coffee_cup.png" alt="Preparation in progress" loading="lazy">
+                        <div class="montage-overlay"></div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="menu.html">Menu</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <p>📞 <a href="tel:+15551234567">(555) 123-4567</a></p>
-                    <p>📧 <a href="mailto:info@casualcoffee.com">info@casualcoffee.com</a></p>
-                    <p>📍 123 Main St, Coffeeville, CA 90210</p>
+    <!-- Branded Footer -->
+    <footer class="grounding-footer">
+        <div class="footer-fabric">
+            <div class="fabric-section">
+                <h3 class="fabric-title">Casual Coffee Co</h3>
+                <p class="footer-tagline"
+                    style="color: var(--latte-cream); opacity: 0.7; font-size: 0.95rem; line-height: 1.6; max-width: 280px;">
+                    Brewing connections and crafting moments since day one. Every cup tells a story.</p>
+            </div>
+            <div class="fabric-section">
+                <h3 class="fabric-title">Paths</h3>
+                <nav class="path-nav">
+                    <a href="../index.html">Home</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+            <div class="fabric-section">
+                <h3 class="fabric-title">Connection</h3>
+                <div class="connection-details">
+                    <a href="tel:+15551234567" class="connect-link">☎ (555) 123-4567</a>
+                    <a href="mailto:info@casualcoffee.com" class="connect-link">✉ info@casualcoffee.com</a>
+                    <address class="connect-link">📍 123 Main St, Coffeeville, CA 90210</address>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Casual Coffee Shop. All rights reserved.</p>
-            </div>
+        </div>
+        <div class="fabric-base">
+            <p>&copy; 2025 Casual Coffee Shop. Freshness in Every Bite.</p>
         </div>
     </footer>
 
     <script src="../js/main.js" defer></script>
     <script src="../js/menu.js" defer></script>
 </body>
+
 </html>
