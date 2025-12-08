@@ -16,20 +16,37 @@
 </head>
 
 <body>
-    <!-- Unconventional Navigation -->
+    <!-- Navigation with Mobile Menu -->
     <nav class="directional-nav">
         <div class="nav-core">
             <div class="logo-flow text-logo">
                 <span class="logo-text">C<span class="logo-accent">a</span>sual</span>
                 <span class="logo-slogan">Coffee Co</span>
             </div>
-            <div class="nav-paths">
+
+            <!-- Desktop Navigation -->
+            <div class="nav-paths desktop-nav">
                 <a href="pages/menu.html" class="path-link menu-path">Menu</a>
                 <a href="pages/about.html" class="path-link about-path">About</a>
                 <a href="pages/contact.html" class="path-link contact-path">Contact</a>
             </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
+                <span class="hamburger-icon"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Panel -->
+        <div class="nav-paths mobile-nav" aria-hidden="true">
+            <a href="pages/menu.html" class="path-link">Menu</a>
+            <a href="pages/about.html" class="path-link">About</a>
+            <a href="pages/contact.html" class="path-link">Contact</a>
         </div>
     </nav>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay"></div>
 
     <!-- Fluid Experience -->
     <main class="experience-flow">

@@ -16,21 +16,39 @@
 </head>
 
 <body>
-    <!-- Directional Navigation -->
+    <!-- Navigation with Mobile Menu -->
     <nav class="directional-nav">
         <div class="nav-core">
             <div class="logo-flow text-logo">
                 <span class="logo-text">C<span class="logo-accent">a</span>sual</span>
                 <span class="logo-slogan">Coffee Co</span>
             </div>
-            <div class="nav-paths">
+
+            <!-- Desktop Navigation -->
+            <div class="nav-paths desktop-nav">
                 <a href="../index.html" class="path-link">Home</a>
                 <a href="menu.html" class="path-link">Menu</a>
                 <a href="about.html" class="path-link">About</a>
                 <a href="contact.html" class="path-link active-path">Contact</a>
             </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
+                <span class="hamburger-icon"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Panel -->
+        <div class="nav-paths mobile-nav" aria-hidden="true">
+            <a href="../index.html" class="path-link">Home</a>
+            <a href="menu.html" class="path-link">Menu</a>
+            <a href="about.html" class="path-link">About</a>
+            <a href="contact.html" class="path-link active-path">Contact</a>
         </div>
     </nav>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay"></div>
 
     <!-- Fluid Connection Experience -->
     <main class="experience-flow">
