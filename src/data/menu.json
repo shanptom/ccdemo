@@ -63,22 +63,19 @@
                     "id": "croissant",
                     "name": "Croissant",
                     "description": "Buttery, flaky croissant",
-                    "price": 3.75,
-                    "image": "images/croissant.jpg"
+                    "price": 3.75
                 },
                 {
                     "id": "muffin",
                     "name": "Blueberry Muffin",
                     "description": "Fresh blueberry muffin",
-                    "price": 4.25,
-                    "image": "images/muffin.jpg"
+                    "price": 4.25
                 },
                 {
                     "id": "cookie",
                     "name": "Chocolate Chip Cookie",
                     "description": "Classic chocolate chip cookie",
-                    "price": 2.50,
-                    "image": "images/cookie.jpg"
+                    "price": 2.50
                 }
             ]
         },
@@ -90,15 +87,13 @@
                     "id": "sandwich",
                     "name": "Turkey Sandwich",
                     "description": "Turkey, cheese, and veggies on whole grain",
-                    "price": 8.95,
-                    "image": "images/sandwich.jpg"
+                    "price": 8.95
                 },
                 {
                     "id": "salad",
                     "name": "Garden Salad",
                     "description": "Fresh mixed greens with house dressing",
-                    "price": 7.50,
-                    "image": "images/salad.jpg"
+                    "price": 7.50
                 }
             ]
         }
