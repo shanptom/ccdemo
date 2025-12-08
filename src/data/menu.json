@@ -1,0 +1,121 @@
+{
+    "categories": [
+        {
+            "id": "coffee",
+            "name": "Seasonal Lattes",
+            "items": [
+                {
+                    "id": "white-choc-rasp",
+                    "name": "White Choc Raspberry Macadamia",
+                    "description": "A luxurious blend of sweet white chocolate, tart raspberry, and nutty macadamia.",
+                    "price": 5.95,
+                    "image": "../images/white_chocolate_raspberry_macadamia_nut_latte.png"
+                },
+                {
+                    "id": "eggnog",
+                    "name": "Classic Eggnog Latte",
+                    "description": "Rich holiday cheer in a cup, finished with a dusting of nutmeg.",
+                    "price": 5.50,
+                    "image": "../images/Eggnog_latte.png"
+                },
+                {
+                    "id": "maple-brown-sugar",
+                    "name": "Maple Brown Sugar",
+                    "description": "The warm, comforting sweetness of real maple syrup and brown sugar.",
+                    "price": 5.75,
+                    "image": "../images/maple_brown_sugar_latte.png"
+                },
+                {
+                    "id": "oatmeal-chai",
+                    "name": "Oatmeal Cookie Chai",
+                    "description": "Spiced chai tea latte with a bakery-fresh oatmeal cookie twist.",
+                    "price": 5.25,
+                    "image": "../images/oatmeal_cookie_chai_tea_latte.png"
+                },
+                {
+                    "id": "white-choc-pep",
+                    "name": "White Choc Peppermint",
+                    "description": "Cool peppermint meets creamy white chocolate for a winter favorite.",
+                    "price": 5.50,
+                    "image": "../images/white_chocolate_peppermint_latte.png"
+                },
+                {
+                    "id": "york-patty",
+                    "name": "York Peppermint Patty",
+                    "description": "Dark chocolate mocha with a refreshing burst of peppermint.",
+                    "price": 5.75,
+                    "image": "../images/york_peppermint_patty_latte.png"
+                },
+                {
+                    "id": "sugar-cookie",
+                    "name": "Sugar Cookie Latte",
+                    "description": "Buttery vanilla sweetness topped with festive sprinkles.",
+                    "price": 5.50,
+                    "image": "../images/sugarcookkielatte.png"
+                }
+            ]
+        },
+        {
+            "id": "pastries",
+            "name": "Pastries",
+            "items": [
+                {
+                    "id": "croissant",
+                    "name": "Croissant",
+                    "description": "Buttery, flaky croissant",
+                    "price": 3.75,
+                    "image": "images/croissant.jpg"
+                },
+                {
+                    "id": "muffin",
+                    "name": "Blueberry Muffin",
+                    "description": "Fresh blueberry muffin",
+                    "price": 4.25,
+                    "image": "images/muffin.jpg"
+                },
+                {
+                    "id": "cookie",
+                    "name": "Chocolate Chip Cookie",
+                    "description": "Classic chocolate chip cookie",
+                    "price": 2.50,
+                    "image": "images/cookie.jpg"
+                }
+            ]
+        },
+        {
+            "id": "lunch",
+            "name": "Lunch",
+            "items": [
+                {
+                    "id": "sandwich",
+                    "name": "Turkey Sandwich",
+                    "description": "Turkey, cheese, and veggies on whole grain",
+                    "price": 8.95,
+                    "image": "images/sandwich.jpg"
+                },
+                {
+                    "id": "salad",
+                    "name": "Garden Salad",
+                    "description": "Fresh mixed greens with house dressing",
+                    "price": 7.50,
+                    "image": "images/salad.jpg"
+                }
+            ]
+        }
+    ],
+    "businessInfo": {
+        "hours": {
+            "monday": "6:00 AM - 6:00 PM",
+            "tuesday": "6:00 AM - 6:00 PM",
+            "wednesday": "6:00 AM - 6:00 PM",
+            "thursday": "6:00 AM - 8:00 PM",
+            "friday": "6:00 AM - 8:00 PM",
+            "saturday": "7:00 AM - 8:00 PM",
+            "sunday": "7:00 AM - 6:00 PM"
+        },
+        "phone": "(555) 123-4567",
+        "email": "info@casualcoffee.com",
+        "address": "123 Main St, Coffeeville, CA 90210",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.075565452345!2d-122.4212287!3d37.7749297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085818c9bc4f3ab%3A0x4d9595b8a0f55b5b!2s123%20Main%20St%2C%20Coffeeville%2C%20CA%2090210!5e0!3m2!1sen!2sus!4v1635456789012!5m2!1sen!2sus"
+    }
+}

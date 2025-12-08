@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Casual Coffee Shop - Local Coffee & Pastries">
+    <title>Casual Coffee Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-cup">
+                <div class="loader-steam">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.jpg" alt="Casual Coffee Shop Logo" width="150" height="60">
+                </a>
+            </div>
+            <button class="hamburger-menu" aria-label="Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="pages/menu.html" class="nav-link">Menu</a></li>
+                    <li class="nav-item"><a href="pages/about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="pages/contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="reveal-text">Welcome to</span>
+                        <span class="reveal-text">Casual Coffee Shop</span>
+                    </h1>
+                    <p class="tagline reveal-text">Your local spot for great coffee and pastries</p>
+                    <div class="cta-buttons reveal-text">
+                        <a href="pages/menu.html" class="btn btn-primary">View Menu</a>
+                        <a href="pages/contact.html" class="btn btn-secondary">Hours & Location</a>
+                    </div>
+                </div>
+
+                <div class="hero-feature-img">
+                    <img src="images/coffee_cup.png" alt="Freshly Brewed Coffee" loading="eager">
+                </div>
+            </section>
+
+            <section class="featured" id="menu">
+                <div class="container">
+                    <h2>Featured Seasonal Treats</h2>
+                    <div class="featured-grid">
+                        <!-- Teaser Product List (Only 3 Items) -->
+                        <div class="featured-item product-card">
+                            <div class="image-wrapper shape-1">
+                                <img src="images/white_chocolate_raspberry_macadamia_nut_latte.png"
+                                    alt="White Chocolate Raspberry Macadamia Nut Latte" loading="lazy">
+                            </div>
+                            <h3>White Choc Raspberry</h3>
+                            <p>A luxurious blend of sweet and nutty flavors</p>
+                        </div>
+                        <div class="featured-item product-card">
+                            <div class="image-wrapper shape-2">
+                                <img src="images/Eggnog_latte.png" alt="Eggnog Latte" loading="lazy">
+                            </div>
+                            <h3>Classic Eggnog Latte</h3>
+                            <p>Holiday cheer in a cup with nutmeg dusting</p>
+                        </div>
+                        <div class="featured-item product-card">
+                            <div class="image-wrapper shape-3">
+                                <img src="images/maple_brown_sugar_latte.png" alt="Maple Brown Sugar Latte"
+                                    loading="lazy">
+                            </div>
+                            <h3>Maple Brown Sugar</h3>
+                            <p>Warm, comforting sweetness of real maple</p>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4" style="margin-top: 3rem;">
+                        <a href="pages/menu.html" class="btn btn-primary">View Full Menu</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Career Section (Split Layout) -->
+            <section class="career">
+                <div class="container">
+                    <div class="career-grid">
+                        <div class="career-image">
+                            <img src="images/careers.png" alt="Barista at work" loading="lazy">
+                        </div>
+                        <div class="career-content">
+                            <h2>Join Our Passionate Team</h2>
+                            <p>We're looking for coffee enthusiasts who love creating memorable experiences. If you're
+                                passionate about the art of brewing and connecting with people, we want to hear from
+                                you.
+                            </p>
+                            <a href="#" class="btn btn-primary">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="pages/menu.html">Menu</a></li>
+                            <li><a href="pages/about.html">About Us</a></li>
+                            <li><a href="pages/contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact Info</h3>
+                        <p>📞 <a href="tel:+15551234567">(555) 123-4567</a></p>
+                        <p>📧 <a href="mailto:info@casualcoffee.com">info@casualcoffee.com</a></p>
+                        <p>📍 123 Main St, Coffeeville, CA 90210</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Casual Coffee Shop. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/main.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Casual Coffee Shop Menu - Coffee, Pastries, and Lunch">
+    <title>Menu - Casual Coffee Shop</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/logo.png" alt="Casual Coffee Shop Logo" width="150" height="60">
+                </a>
+            </div>
+            <button class="hamburger-menu" aria-label="Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Menu</h1>
+                <p class="tagline">Freshly prepared coffee, pastries, and lunch items</p>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <div class="container">
+                <div class="menu-category" id="coffee">
+                    <h2>Coffee</h2>
+                    <div class="menu-grid" id="coffee-items">
+                        <!-- Coffee items will be loaded dynamically -->
+                    </div>
+                </div>
+
+                <div class="menu-category" id="pastries">
+                    <h2>Pastries</h2>
+                    <div class="menu-grid" id="pastries-items">
+                        <!-- Pastries items will be loaded dynamically -->
+                    </div>
+                </div>
+
+                <div class="menu-category" id="lunch">
+                    <h2>Lunch</h2>
+                    <div class="menu-grid" id="lunch-items">
+                        <!-- Lunch items will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>📞 <a href="tel:+15551234567">(555) 123-4567</a></p>
+                    <p>📧 <a href="mailto:info@casualcoffee.com">info@casualcoffee.com</a></p>
+                    <p>📍 123 Main St, Coffeeville, CA 90210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Casual Coffee Shop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js" defer></script>
+    <script src="../js/menu.js" defer></script>
+</body>
+</html>
