@@ -1,9 +1,0 @@
-<svg width="150" height="60" xmlns="http://www.w3.org/2000/svg">
-  <!-- Coffee Bean Icon -->
-  <ellipse cx="25" cy="30" rx="12" ry="18" fill="#2B1A11"/>
-  <path d="M 25 20 Q 30 30 25 40" stroke="#B8814A" stroke-width="2" fill="none"/>
-
-  <!-- Text -->
-  <text x="50" y="25" font-family="Playfair Display, serif" font-size="18" fill="#2B1A11" font-weight="700">Casual</text>
-  <text x="50" y="45" font-family="Playfair Display, serif" font-size="18" fill="#2B1A11" font-weight="700">Coffee</text>
-</svg>
